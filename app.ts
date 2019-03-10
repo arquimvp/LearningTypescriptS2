@@ -2,13 +2,20 @@
 //Crear un tipo apartir del cual pueda utilizar en los 2 objetos siguientes:
 // Objetos:
 
-var patriot4x4 = {
+type camioneta = {
+  color: string,
+  modelo: string,
+  blindada: boolean,
+  rodar?: ()=>void
+}
+
+let patriot4x4: camioneta = {
   color: "Negra",
   modelo: "4x4",
   blindada: true
 };
 
-var lobo4x4 = {
+let lobo4x4: camioneta = {
   color: "Negra",
   modelo: "Harley Davidson",
   blindada: true,
@@ -21,7 +28,14 @@ var lobo4x4 = {
 //#2
 //Crear un tipo que pueda utilizar para el siguiente objeto.
 // desarrolladores debe de ser un arreglo de objetos personalizados.
-var desarrolladores = [{
+
+type Developer = {
+  perfil: string,
+  edad: number,
+  vidaSocial: boolean
+}
+
+let desarrolladores : Developer[] = [{
   perfil:"IOS",
   edad: 23,
   vidaSocial:false
@@ -39,18 +53,29 @@ var desarrolladores = [{
 //#3
 // Multiples tipos
 // cree dos tipos, uno para batman y otro para superman
-var batman = {
+
+type Batman = {
+  poder: string,
+  estatura: number
+}
+
+type Superman = {
+  lider: boolean,
+  poderes: string[]
+}
+
+let batman : Batman = {
   poder:"millonario",
   estatura: 1.78
 };
 
-var superman = {
+let superman : Superman = {
   lider:true,
   poderes: ["volar","vision calorifica","velocidad", "aliento helado"]
 }
 
 // superhybrid, debe poder ser cualquiera de los dos superheroes (batman y superman)
-var superHybrid;
+let superHybrid : Batman | Superman;
 
 superHybrid = batman;
 superHybrid = superman;
