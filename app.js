@@ -1,5 +1,5 @@
-/* Objetos con tipos especificos y metodos
-Yo puedo definir un objeto con diferentes tipos especificos para las propiedades y tambien metodos:
+/*
+Yo puedo definir un objeto de tipo 'Developer':
 */
 var desarrollador = {
     perfil: 'ios',
