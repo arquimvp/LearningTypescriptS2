@@ -1,14 +1,10 @@
-/*
-Yo puedo definir un objeto de tipo 'Developer':
-*/
-var desarrollador = {
-    perfil: 'ios',
-    edad: 30,
-    pasatiempos: ['xbox', 'cervezas'],
-    vidaSocial: false,
-    getEdad: function () {
-        return this.edad;
-    }
+/**
+ * Puedo utilizar el pipe | para asignar diferentes tipos a mi variable.
+ */
+//Variable multitipada:
+var multitipada = "Alberto";
+multitipada = {
+    perfil: 'android',
+    edad: 29
 };
-//El objeto tiene un metodo para devolver la edad:
-console.log(desarrollador.getEdad()); //30
+multitipada = 80;

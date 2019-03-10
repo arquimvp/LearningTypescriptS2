@@ -1,27 +1,24 @@
-//type
-//La palabra reservada "type" me sirve para crear tipos personalizados.
-//Lo siguiente no es un objeto es una definicion de un tipo:
+/**
+ * Definicion de variables con multiples tipos:
+ */
 type Developer = {
   perfil : string, 
-  edad : number, 
-  pasatiempos : string[], 
-  vidaSocial : boolean, 
-  getEdad: () => number
-}
+  edad : number
+};
 
-/*
-Yo puedo definir un objeto de tipo 'Developer':
-*/
+/**
+ * Puedo utilizar el pipe | para asignar diferentes tipos a mi variable.
+ */
 
-let desarrollador : Developer = {
-  perfil: 'ios',
-  edad: 30,
-  pasatiempos: ['xbox','cervezas'],
-  vidaSocial: false,
-  getEdad(){
-    return this.edad;
-  }
-}
+//Variable multitipada:
+let multitipada : string | number | Developer = `Alberto`;
 
-//El objeto tiene un metodo para devolver la edad:
-console.log(desarrollador.getEdad()); //30
+multitipada = {
+  perfil: 'android',
+  edad: 29
+};
+
+
+multitipada = 80;
+
+
