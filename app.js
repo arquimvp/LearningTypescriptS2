@@ -1,10 +1,14 @@
 /**
- * Puedo utilizar el pipe | para asignar diferentes tipos a mi variable.
+ * Typeof
+ * Sirve para revisar el tipo de una variable u objeto
  */
-//Variable multitipada:
-var multitipada = "Alberto";
-multitipada = {
-    perfil: 'android',
-    edad: 29
+var algo = 7;
+console.log(typeof algo); //number
+var otroAlgo = 'hola';
+console.log(typeof otroAlgo); //string
+var obj = {};
+console.log(typeof obj); //object
+var func = function () {
+    return null;
 };
-multitipada = 80;
+console.log(typeof func); //function

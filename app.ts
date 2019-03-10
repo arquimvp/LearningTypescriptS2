@@ -1,24 +1,26 @@
 /**
- * Definicion de variables con multiples tipos:
- */
-type Developer = {
-  perfil : string, 
-  edad : number
-};
-
-/**
- * Puedo utilizar el pipe | para asignar diferentes tipos a mi variable.
+ * Typeof
+ * Sirve para revisar el tipo de una variable u objeto
  */
 
-//Variable multitipada:
-let multitipada : string | number | Developer = `Alberto`;
+ let algo : any = 7;
 
-multitipada = {
-  perfil: 'android',
-  edad: 29
-};
+ console.log(typeof algo);  //number
 
 
-multitipada = 80;
+ let otroAlgo : any = 'hola';
 
+ console.log(typeof otroAlgo); //string
+
+
+ let obj : any = {};
+
+ console.log(typeof obj); //object
+
+
+ let func : any = function(){
+   return null;
+ }
+
+ console.log(typeof func); //function
 
