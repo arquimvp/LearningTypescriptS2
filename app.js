@@ -1,11 +1,14 @@
-/* Objetos con tipos especificos
-Yo puedo definir un objeto con diferentes tipos especificos para las propiedades:
+/* Objetos con tipos especificos y metodos
+Yo puedo definir un objeto con diferentes tipos especificos para las propiedades y tambien metodos:
 */
 var desarrollador = {
     perfil: 'ios',
     edad: 30,
     pasatiempos: ['xbox', 'cervezas'],
-    vidaSocial: false
+    vidaSocial: false,
+    getEdad: function () {
+        return this.edad;
+    }
 };
-//Typescript no permite traspilar la siguiente linea
-desarrollador.pasatiempos = 2;
+//El objeto tiene un metodo para devolver la edad:
+console.log(desarrollador.getEdad()); //30
