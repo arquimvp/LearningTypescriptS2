@@ -1,19 +1,13 @@
-/* Objetos basicos
-Yo puedo definir un objeto con diferentes tipos de propiedades:
+/* Objetos con tipos especificos
+Yo puedo definir un objeto con diferentes tipos especificos para las propiedades:
 */
 
-let desarrollador = {
+let desarrollador : { perfil : string, edad : number, pasatiempos : string[], vidaSocial : boolean } = {
   perfil: 'ios',
   edad: 30,
-  pasatiempo: 'xbox',
+  pasatiempos: ['xbox','cervezas'],
   vidaSocial: false
 }
 
-/*Automaticamente typescript creo un tipo para definir al objeto de manera estricta:
-El siguiente codigo debe marcarse como erroneo pues hace falta definir el perfil y la vodaSocial.
-*/
-
-desarrollador = {
-  edad: 50,
-  pasatiempo: 'futbol'
-}
+//Typescript no permite traspilar la siguiente linea, el objeto desarrollador  tiene una definicion especifica.
+desarrollador.pasatiempos = 2;
