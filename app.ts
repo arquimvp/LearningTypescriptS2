@@ -79,3 +79,19 @@ let superHybrid : Batman | Superman;
 
 superHybrid = batman;
 superHybrid = superman;
+
+
+//tsconfig.json --------->   IMPORTANTE!
+
+/**
+ * El archivo tsconfig.json indica al compilador de typescript las reglas generales para la compilacion.
+ * 
+ * Hay muchas configuraciones que podemos aplicar sobre este archivo, pero hay una muy importante que nos sirve para poder
+ * debuguear directamente el archivo ts
+ * "sourceMap": true
+ * Habra que ejecutar el comando "tsc" por si solo en la consola.
+ * Esta propiedad nos permitira obtener el archivo app.js.map el cual contiene los mapas de origen que vinculan al archivo ts con el js.
+ * de esta forma podremos debuguear directamente nuestro archivo ts.
+ * En un proyecto Angular o Ionic, no tendremos que preocuparnos por configurar esta propiedad, por defecto viene habilitada.
+ * Al habilitar dicha propiedad se habilita "use strict", que es el modo estricto que no puede, por ejemplo, usar variables no declaradas.
+ */
