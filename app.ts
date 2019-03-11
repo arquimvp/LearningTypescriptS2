@@ -1,21 +1,39 @@
-/*
-ES6 = ES2015
+/*Constantes (const)
 
-let
-
-Reglas:
-- Debe sustituir "var" por "let" de ES5
-- No puedes redeclarar una variable dentro del mismo scope, pero si puedes redeclararla en diferentes scopes.
-
+Regla:
+- Por convencion todas las constantes deben ir en mayusculas.
 */
 
-let myname : string = 'alberto';
+/**
+ * No puedes mutar la variable dentro del mismo scope  
+ * Si puedes redeclararla o reutilizarla en diferentes scopes.
+ */
+const ENDPOINT : string = 'https://140.34.4.5/api/user';
 
-if(true){
-  let myname : string = 'juan' //la redeclaracion es valida sin embargo solo vive dentro del scope que la contiene. Es util si lo que requieres es reutilizar el nombre de la variable.
+if (true) {
+  const ENDPOINT : string = 'https://1.1.1.1';
 }
 
-//Con el codigo anterior si hubieses utilizado var el console.log imprimiria "alberto".
+/**
+ * En iteraciones como BUCLES foreach, for etc, en cada iteracion se considera un scope nuevo por lo tanto es posble hacer lo siguiente:
+ */
 
-console.log(myname); //alberto
+for (const I of [1,2,3,4,5]){
+  console.log(I);
+}
 
+
+/** 
+ * constantes en OBJETOS.
+ * No me permite mutar la estructura del objeto.
+ * En este caso unicamente me permite cambiar el valor de las propiedades de la siguiente manera:
+ */
+
+ const USUARIO = {
+   activo: true,
+   rol: 'admin'
+ }
+
+ USUARIO.activo = false;
+
+ console.log(USUARIO);
