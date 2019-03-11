@@ -3,27 +3,31 @@
 // No es a TypeScript, solo JAVASCRIPT
 
 // Constantes?
-var AUTO = "Infinity Q50";
+const AUTO = "Infinity Q50";
 
 // Declaracion de variables?
-var piloto = "Juan Martinez",
+let piloto = "Juan Martinez",
     copiloto = "Juana Meza";
 
 // Destructuracion de arreglos:
-var autos = ["eclipse","focus Rs","Leon Fr"];
+let autos = ["eclipse","focus Rs","Leon Fr"];
 
+let [eclipse,focus,leon] = autos;
+
+console.log(eclipse,focus,leon);
 
 
 // Destructuracion de objetos?
-var superCar = {
+let superCar = {
   marca: "Mazda",
   motor: "2.5 lts",
   traccion: "Delantera"
 };
 
+let {marca,motor,traccion} = superCar;
+console.log(marca,motor,traccion);
 
 // Ciclo for Of?
-for(var i=0; i<= autos.length - 1; i++){
-  var car = autos[i];
-  console.log(car);
+for (let car of autos) {
+    console.log(car);
 }
