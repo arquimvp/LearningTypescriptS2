@@ -1,47 +1,50 @@
-/**
- * Destructuracion de objetos
+/** 
+ * Ciclos convencionales y "For of" nuevo en ES6
  */
 
- //Objeto a destructurar:
- let superAutos = {
-   sport: 'cupra 290',
-   ponyCar:  'camaro',
-   muscleCar: 'shelby'
+ let shelby = {
+   motor: '5.0 lts',
+   traccion: 'trasera'
  }
 
- //Destructuracion:
- //(No importa el orden de la destructuracion.)
- let {sport, muscleCar, ponyCar } = superAutos;
+ let cupra290 = {
+   motor: '2.0 lts',
+   traccion: 'delantera'
+ }
 
- console.log(sport);
- console.log(ponyCar);
- console.log(muscleCar);
+ let s3 = {
+   motor: '2.0 lts',
+   traccion: 'quattro'
+ }
 
- //Si quiero cambiar el nombre de la variable
- let {sport:sport290, ponyCar:pony, muscleCar:muscle} = superAutos;
+ //Construimos el arreglo a recorrer:
+ let favorites = [shelby, cupra290, s3];
 
- console.log(sport290);
- console.log(pony);
- console.log(muscle);
+//Lo recorremos con
+ // 1. foreach:
+ favorites.forEach(element => {
+   console.log(element.motor);
+   console.log(element.traccion);
+ });
 
+ // 2. for:
+ for (let i in favorites) {
+   let fav = favorites[i];
+   console.log(fav.motor, fav.traccion);
+ }
 
-/**
- * Destructuracion de arreglos
- */
+ // 3. another for:
+ for (let i = 0; i <= favorites.length - 1; i++) {
+   let fav = favorites[i];
+   console.log(fav.motor, fav.traccion);
+ }
 
- //Arreglo a destructurar:
- let mundiales = ['mexico', 'rusia', 'brazil', 'francia'];
+ // 4. For of (nuevo en ES6):
+ for (let fav of favorites) {
+  console.log(fav.motor, fav.traccion);
+ }
 
- //destructuracion:
- let [m1, m2, m3, m4] = mundiales;
-
- console.log(m1);
- console.log(m2);
- console.log(m3);
- console.log(m4);
-
- //Si solo requiriera el 3er mundial:
-
- let [, , m33]= mundiales;
-
- console.log(m33);
+ // 5. for para propiedades del objeto:
+ for (let prop in cupra290) {
+   console.log(`cupra290.${prop}`);
+ }

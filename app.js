@@ -1,36 +1,44 @@
 "use strict";
 /**
- * Destructuracion de objetos
+ * Ciclos convencionales y "For of" nuevo en ES6
  */
-//Objeto a destructurar:
-var superAutos = {
-    sport: 'cupra 290',
-    ponyCar: 'camaro',
-    muscleCar: 'shelby'
+var shelby = {
+    motor: '5.0 lts',
+    traccion: 'trasera'
 };
-//Destructuracion:
-//(No importa el orden de la destructuracion.)
-var sport = superAutos.sport, muscleCar = superAutos.muscleCar, ponyCar = superAutos.ponyCar;
-console.log(sport);
-console.log(ponyCar);
-console.log(muscleCar);
-//Si quiero cambiar el nombre de la variable
-var sport290 = superAutos.sport, pony = superAutos.ponyCar, muscle = superAutos.muscleCar;
-console.log(sport290);
-console.log(pony);
-console.log(muscle);
-/**
- * Destructuracion de arreglos
- */
-//Arreglo a destructurar:
-var mundiales = ['mexico', 'rusia', 'brazil', 'francia'];
-//destructuracion:
-var m1 = mundiales[0], m2 = mundiales[1], m3 = mundiales[2], m4 = mundiales[3];
-console.log(m1);
-console.log(m2);
-console.log(m3);
-console.log(m4);
-//Si solo requiriera el 3er mundial:
-var m33 = mundiales[2];
-console.log(m33);
+var cupra290 = {
+    motor: '2.0 lts',
+    traccion: 'delantera'
+};
+var s3 = {
+    motor: '2.0 lts',
+    traccion: 'quattro'
+};
+//Construimos el arreglo a recorrer:
+var favorites = [shelby, cupra290, s3];
+//Lo recorremos con
+// 1. foreach:
+favorites.forEach(function (element) {
+    console.log(element.motor);
+    console.log(element.traccion);
+});
+// 2. for:
+for (var i in favorites) {
+    var fav = favorites[i];
+    console.log(fav.motor, fav.traccion);
+}
+// 3. another for:
+for (var i = 0; i <= favorites.length - 1; i++) {
+    var fav = favorites[i];
+    console.log(fav.motor, fav.traccion);
+}
+// 4. For of (nuevo en ES6):
+for (var _i = 0, favorites_1 = favorites; _i < favorites_1.length; _i++) {
+    var fav = favorites_1[_i];
+    console.log(fav.motor, fav.traccion);
+}
+// 5. for para propiedades del objeto:
+for (var prop in cupra290) {
+    console.log("cupra290." + prop);
+}
 //# sourceMappingURL=app.js.map
